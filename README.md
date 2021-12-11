@@ -13,15 +13,16 @@
 
 <h2>Consumption</h2>
 
-<h6>Clone the Server file [Express JS Server TypeScript!](https://github.com/andrewkariuki/express-server-ts.git)</h6>
-<pre height="3px">
+##### Clone the Server file [Express JS Server TypeScript!](https://github.com/andrewkariuki/express-server-ts.git)
+ 
+<pre height="1px">
   <code>
     git clone https://github.com/andrewkariuki/express-server-ts.git
   </code>
 </pre>
 
 <h6>install all the dependencies</h6>
-<pre height="3px">
+<pre height="1px">
   <code>
    cd express-server-ts && yarn || npm install
   </code>
