@@ -1,7 +1,5 @@
-## Express Js Typescript Server {align=center}
-
 <div align="center">
-<h2></h2>
+  <h2>Express Js Typescript Server</h2>
 <p>
   <i>
     Node Js / TypeScript / Express Js Server Boilerplate.
@@ -9,7 +7,7 @@
 </p>
 </div>
 <p align="center">
- <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript" />&nbsp;&nbsp;
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="Node.js" />&nbsp;&nbsp;
 </p>
 
