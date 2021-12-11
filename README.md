@@ -1,7 +1,7 @@
 <div align="center">
   <h2>Express Js Typescript Server</h2>
   <p>
-   *Node Js / TypeScript / Express Js Server Boilerplate.*
+    <i>Node Js / TypeScript / Express Js Server Boilerplate.</i>
    </p>
 </div>
 <p align="center">
