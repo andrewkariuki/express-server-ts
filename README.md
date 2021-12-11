@@ -48,7 +48,7 @@
 The server is currently running on pug as its templating engine but you have an option to use the like of *Twig, Handlebars, Mustache, Ejs and any other templating engine.* All you have to do it install their corresponding dependences the change this piece of code in your app.ts and you are good to go.
 
 ```js
-   app.set("view engine", "pug" //replace;
+   app.set("view engine", "pug" //replace);
 ```
 ##### What's next for Express Server TypeScript
  
