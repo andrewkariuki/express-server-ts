@@ -1,6 +1,8 @@
 <div align="center">
   <h2>Express Js Typescript Server</h2>
+  <p>
    *Node Js / TypeScript / Express Js Server Boilerplate.*
+   </p>
 </div>
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript" />&nbsp;&nbsp;
