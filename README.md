@@ -1,5 +1,7 @@
+## Express Js Typescript Server {align=center}
+
 <div align="center">
-<h2>Express Js Typescript Server</h2>
+<h2></h2>
 <p>
   <i>
     Node Js / TypeScript / Express Js Server Boilerplate.
@@ -11,58 +13,46 @@
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="Node.js" />&nbsp;&nbsp;
 </p>
 
-<h2>Consumption</h2>
+## Consumption
 
 ##### Clone the Server file [Express JS Server TypeScript!](https://github.com/andrewkariuki/express-server-ts.git)
  
 ```shell
   git clone https://github.com/andrewkariuki/express-server-ts.git
 ```
-<pre height="1px">
-  <code>
-    
-  </code>
-</pre>
+  
+##### install all the dependencies
+ 
+```shell
+  cd express-server-ts && yarn || npm install
+```
+  
+##### Running the server in development
 
-<h6>install all the dependencies</h6>
-<pre height="1px">
-  <code>
-   cd express-server-ts && yarn || npm install
-  </code>
-</pre>
+```shell
+  yarn develop  || npm run develop
+```
+  
+##### Compile TypeScript
+ 
+```shell
+  yarn compile  || npm run compile
+```
 
-<h6>Running the server in development</h6>
-<pre height="3px">
-  <code>
-   yarn develop  || npm run develop
-  </code>
-</pre>
+##### Running the server in production
+  
+```shell
+  yarn start  || npm run start || node ./build/app.js
+```
 
-<h6>Compile TypeScript</h6>
-<pre height="3px">
-  <code>
-   yarn compile  || npm run compile
-  </code>
-</pre>
+##### ****Point to note****
+  
+The server is currently running on pug as its templating engine but you have an option to use the like of *Twig, Handlebars, Mustache, Ejs and any other templating engine.* All you have to do it install their corresponding dependences the change this piece of code in your app.ts and you are good to go.
 
-<h6>Running the server in production</h6>
-<pre height="3px">
-  <code>
-   yarn start  || npm run start || node ./build/app.js
-  </code>
-</pre>
-
-<h6>****Point to note****</h6>
-<p>The server is currently running on pug as its templating engine but you have an option to use the like of <i>Twig, Handlebars, Mustache, Ejs and any other templating engine<i/>
-. All you have to do it install their corresponding dependences the change this piece of code in your app.ts and you are good to go.
-</p>
-<pre>
-  <code>
+```js
    app.set("view engine", "pug" //replace with your favorite templating engine after install);
-  </code>
-</pre>
+```
+##### What's next for Express Server TypeScript
+ 
+*...more to come functinalities to come like - Auth, Tests with Jest, ORM - TypeORM and Mongoose etc.*
 
-
-<p>
-  <i> ... more to come functinalities to come like - Auth, Tests with Jest, ORM - TypeORM and Mongoose etc.<i>
-</p>
