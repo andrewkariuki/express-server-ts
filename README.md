@@ -15,9 +15,12 @@
 
 ##### Clone the Server file [Express JS Server TypeScript!](https://github.com/andrewkariuki/express-server-ts.git)
  
+```shell
+  git clone https://github.com/andrewkariuki/express-server-ts.git
+```
 <pre height="1px">
   <code>
-    git clone https://github.com/andrewkariuki/express-server-ts.git
+    
   </code>
 </pre>
 
