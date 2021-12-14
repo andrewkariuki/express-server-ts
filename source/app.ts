@@ -32,7 +32,7 @@ app.use(cookieParser());
 
 app.use(
   session({
-    name: "qid",
+    name: "_FICHA",
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
