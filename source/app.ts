@@ -1,15 +1,16 @@
-import * as express from "express";
-import * as http from "http";
-import * as path from "path";
-
-import * as winston from "winston";
-import * as expressWinston from "express-winston";
-import * as cors from "cors";
-import * as sassMiddleware from "node-sass-middleware";
+require("dotenv-safe").config();
 import * as cookieParser from "cookie-parser";
-
+import * as cors from "cors";
 import debug from "debug";
-
+import * as express from "express";
+import * as session from "express-session";
+import * as expressWinston from "express-winston";
+import * as helmet from "helmet";
+import * as http from "http";
+import * as sassMiddleware from "node-sass-middleware";
+import * as path from "path";
+import "reflect-metadata";
+import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
 
@@ -29,7 +30,23 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cookieParser());
 
+app.use(
+  session({
+    name: "qid",
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+    },
+  })
+);
+
 app.use(cors());
+
+app.use(helmet());
 
 app.use(
   sassMiddleware({
