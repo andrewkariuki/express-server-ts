@@ -13,6 +13,7 @@ import "reflect-metadata";
 import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
+import { Redis } from "./Utils";
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
