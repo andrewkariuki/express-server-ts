@@ -15,6 +15,8 @@ import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
 import { Redis } from "./Utils";
+import * as RateLimit from "express-rate-limit";
+import * as RedisRateLimit from "rate-limit-redis";
 
 const RedisStore = ConnectRedis(session as any);
 
@@ -31,6 +33,16 @@ app.set("view engine", "pug");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(
+  RateLimit({
+    store: new RedisRateLimit({
+      client: Redis,
+    }),
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+  })
+);
 
 app.use(cookieParser());
 
