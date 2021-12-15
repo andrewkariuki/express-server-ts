@@ -20,6 +20,8 @@ import * as RedisRateLimit from "rate-limit-redis";
 
 const RedisStore = ConnectRedis(session as any);
 
+if (process.env.NODE_ENV === "test") Redis.flushall();
+
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
 
