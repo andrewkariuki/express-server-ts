@@ -1,4 +1,5 @@
 require("dotenv-safe").config();
+import * as ConnectRedis from "connect-redis";
 import * as cookieParser from "cookie-parser";
 import * as cors from "cors";
 import debug from "debug";
@@ -13,7 +14,8 @@ import "reflect-metadata";
 import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
-import { Redis } from "./Utils";
+
+const RedisStore = ConnectRedis(session as any);
 
 const app: express.Application = express();
 const server: http.Server = http.createServer(app);
