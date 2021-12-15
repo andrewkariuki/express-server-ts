@@ -40,14 +40,14 @@ app.use(
       client: Redis as any,
       prefix: process.env.REDIS_SESSION_PREFIX,
     }),
-    name: "_FICHA",
+    name: process.env.SESSION_NAME,
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days or One Week
     },
   })
 );
