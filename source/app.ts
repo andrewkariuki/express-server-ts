@@ -14,6 +14,7 @@ import "reflect-metadata";
 import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
+import { Redis } from "./Utils";
 
 const RedisStore = ConnectRedis(session as any);
 
@@ -35,6 +36,10 @@ app.use(cookieParser());
 
 app.use(
   session({
+    store: new RedisStore({
+      client: Redis as any,
+      prefix: process.env.REDIS_SESSION_PREFIX,
+    }),
     name: "_FICHA",
     secret: process.env.SESSION_SECRET,
     resave: false,
