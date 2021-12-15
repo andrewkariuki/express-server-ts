@@ -17,6 +17,7 @@ import { IndexRoutes, UsersRoutes } from "./Routes";
 import { Redis } from "./Utils";
 import * as RateLimit from "express-rate-limit";
 import * as RedisRateLimit from "rate-limit-redis";
+import * as compression from "compression";
 
 const RedisStore = ConnectRedis(session as any);
 
@@ -35,6 +36,8 @@ app.set("view engine", "pug");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(compression());
 
 app.use(
   RateLimit({
