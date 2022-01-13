@@ -1,23 +1,23 @@
 require("dotenv-safe").config();
+import * as compression from "compression";
 import * as ConnectRedis from "connect-redis";
 import * as cookieParser from "cookie-parser";
 import * as cors from "cors";
 import debug from "debug";
 import * as express from "express";
+import * as RateLimit from "express-rate-limit";
 import * as session from "express-session";
 import * as expressWinston from "express-winston";
 import * as helmet from "helmet";
 import * as http from "http";
 import * as sassMiddleware from "node-sass-middleware";
 import * as path from "path";
+import * as RedisRateLimit from "rate-limit-redis";
 import "reflect-metadata";
 import * as winston from "winston";
 import { CommonRoutesConfig } from "./Common";
 import { IndexRoutes, UsersRoutes } from "./Routes";
 import { Redis } from "./Utils";
-import * as RateLimit from "express-rate-limit";
-import * as RedisRateLimit from "rate-limit-redis";
-import * as compression from "compression";
 
 const RedisStore = ConnectRedis(session as any);
 
